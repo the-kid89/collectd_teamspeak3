@@ -200,6 +200,7 @@ class TS3ServerStats:
 			filetransfer = self.__get_filetransfer_vs_total(server['virtualserver_id'])
 			results[server['virtualserver_id']] = {
 				'clients_online':		int(server['virtualserver_clientsonline']),
+				'packet_loss': server['virtualserver_total_packetloss_speech']),
 				'filetransfer_count':	filetransfer['count'],
 				'filetransfer_speed':	filetransfer['current_speed']
 			}
